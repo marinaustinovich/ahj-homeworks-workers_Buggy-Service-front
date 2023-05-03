@@ -9,7 +9,6 @@ const files = [
 
 async function putFilesToCache(file) {
   const cache = await caches.open(cacheName);
-  console.log(file);
   await cache.addAll(file);
 }
 
@@ -22,7 +21,6 @@ async function removeOldCache(retain) {
 }
 
 self.addEventListener('install', (evt) => {
-  console.log(evt);
   evt.waitUntil((async () => {
     await putFilesToCache(files);
     await self.skipWaiting();
@@ -30,7 +28,6 @@ self.addEventListener('install', (evt) => {
 });
 
 self.addEventListener('activate', (evt) => {
-  console.log(evt);
   evt.waitUntil((async () => {
     await removeOldCache([cacheName]);
     await self.clients.claim();
