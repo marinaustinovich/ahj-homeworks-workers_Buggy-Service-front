@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/0p9qslm3t5i7f7we/branch/main?svg=true)](https://ci.appveyor.com/project/marinaustinovich/ahj-homeworks-workers-buggy-service-front/branch/main)
 
 ### Buggy Service
 
